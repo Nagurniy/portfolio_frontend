@@ -165,7 +165,7 @@ body {
   margin: 0 0 24px;
 }
 
-.button {
+.portfolio-button {
   padding: 6px 20px;
   display: inline-block;
   vertical-align: baseline;
@@ -175,6 +175,16 @@ body {
   background-color: #288be6;
   color: #ffffff;
 }
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  background-color: #86c3fa;
+}
+
+.portfolio-button:active {
+  color:#b2d7f8;
+}
+
 
 .page-footer {
   padding: 40px 0;
