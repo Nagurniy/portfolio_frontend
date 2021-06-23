@@ -374,9 +374,9 @@ img  {
     color: var(--basic-white);
 }
 
-.filter-checkbox input[type="checkbox"]:focus + label::before {
+/* .filter-checkbox input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
-}
+} */
 
 .range-filter {
     width: 317px;
