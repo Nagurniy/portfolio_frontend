@@ -100,6 +100,40 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
       </div>
+      
+      <div class="hotel-search-form">
+        <button class="hotel-search-button" type="button">Поиск гостиницы в Седоне</button>
+          
+          <div class="search-form">
+            <form class="search-form-items" action="https://echo.htmlacademy.ru" method="get">
+              <p class="search-item search-item-date">
+               <label for="search-arrival-date">Дата заезда:</label>
+               <input id="search-arrival-date" type="text" name="arrival-date" placeholder="01.01.2021" required>
+               <button class="search-icon-calend" type="button"></button>
+              </p>
+              <p class="search-item search-item-date"> 
+               <label for="search-departure-date">Дата выезда:</label>
+               <input id="search-departure-date" type="text" name="departure-date" placeholder="01.01.2021" required>
+               <button class="search-icon-calend" type="button"></button>
+              </p>
+              <p class="search-item search-item-age adult">
+               <label for="search-adult">Взрослые:</label>
+               <button class="search-icon search-icon-minus" type="button"></button>
+               <input class="search-item-adult" id="search-adult" type="number" name="adult" min="0" max="100" value="2" readonly required>
+               <button class="search-icon search-icon-plus" type="button"></button>
+              </p>
+              <p class="search-item search-item-age children">
+               <label for="search-children">Дети:</label>
+               <button class="search-icon search-icon-minus" type="button"></button>
+               <input class="search-item-children" id="search-children" type="number" name="children" min="0" max="100" value="0" readonly required >
+               <button class="search-icon search-icon-plus" type="button"></button>
+              </p>
+            </form>
+            <button class="search-button" type="submit">Найти</button>
+          </div>
+      
+      </div>
+      
       <div class="sedona-map">
         <h2 class="visually-hidden">Карта</h2>
         <img class="map" src="img/map_01.jpg" width="1199" height="594" alt="Карта Седоны">
@@ -119,46 +153,19 @@
         <h2 class="visually-hidden">Социалки</h2>
           <a class="social social-tw" href="http://www.twitter.com"></a>
           <a class="social social-fb" href="http://www.facebook.com"></a>
-          <a class="social social-ig" href="http://www.instagram.com"></a>
+          <a class="social social-yt" href="http://www.youtube.com"></a>
       </section>  
         <section class="footer-copyright">
+          <h2 class="visually-hidden">Копирайт</h2>
+          <div class="copyright">
           <span>Website by</span>
-          <a href="https://htmlacademy.ru">
-            <img class="copyright" src="img/logo-htmlacademy.svg" width="115" height="41" alt="логотип_html_ak">
-          </a>
+        </div>
+          <a class="copyright-logo" href="https://htmlacademy.ru"></a>
         </section>
     </div>
   </footer>
 
-  <section class="hotel-search-form">
-    <h2>Поиск гостиницы в Седоне</h2>
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-    <p class="search-item">
-      <label for="search-arrival-date">Дата заезда:</label>
-      <input class="search-calendar-icon" id="search-arrival-date" type="text" name="arrival-date" placeholder="01.01.2021">
-    </p>
-    <p class="search-item">
-      <label for="search-departure-date">Дата выезда:</label>
-      <input class="search-calendar-icon" id="search-departure-date" type="text" name="departure-date" placeholder="01.01.2021">
-    </p>
-    <p class="search-item">
-      <label for="search-adult">Взрослые:</label>
-      <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-      <input id="search-adult" type="number" name="adult" min="0" max="100" value="1" readonly class="raz">
-      <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-    </p>
-    <p class="search-item">
-      <label for="search-children">Дети:</label>
-      <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-      <input id="search-children" type="number" name="children" min="0" max="100" value="1" readonly class="raz">
-      <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-    </p>
-    <!--Разобраться с кнопками "+ -"
-    <button class="btn"><i class="fa fa-minus"></i></button>
-    <button class="btn"><i class="fa fa-plus"></i></button>-->
-    <button class="search-button" type="submit">Найти</button>
-    </form>
-  </section>
+  
   
   </body>
 </html>

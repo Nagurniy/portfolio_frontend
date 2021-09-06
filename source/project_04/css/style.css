@@ -374,9 +374,9 @@ img  {
     color: var(--basic-white);
 }
 
-/* .filter-checkbox input[type="checkbox"]:focus + label::before {
+.filter-checkbox input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
-} */
+}
 
 .range-filter {
     width: 317px;
@@ -716,23 +716,35 @@ img  {
 
 .hotel-search  {
     display:flex;
+    position: relative;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0;
     padding: 0;
     font-size: 14px;
     line-height: 24px;
-    text-align: center;
+    /* outline: 5px solid rgba(55, 23, 240, 0.534); */
+    outline-offset: -5px;
+}
+
+.search-info  {
+    margin: 0 0 127px 0;
+    padding: 0;
+}
+
+.search-info h2  {
+    font-size: 30px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 32px;
+    padding: 0px;
     /* outline: 5px solid rgba(55, 23, 240, 0.534);
     outline-offset: -5px; */
 }
 
-.hotel-search h2  {
-    font-size: 30px;
-    line-height: 24px;
-}
-
-.search-info  {
-    margin: 0 0 110px 0;
+.search-info p {
+    margin: 0;
     padding: 0;
 }
 
@@ -740,37 +752,220 @@ img  {
     background-image: url("img/icon_01.png");
 }
 
-.hotel-search-form h2  {
+.hotel-search-form {
+    position: absolute;
+    top: 145px;
+    width: 568px;
+    height: 481px;
+    background-color: var(--basic-white);
+    /* outline: 3px solid #f51aa175; */
+}
+
+.hotel-search-button  {
+    font-family: PT Sans;
+    font-weight: 700;
     font-size: 21px;
     line-height: 26px;
+    font-style: normal;
     text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 30px 139px;
+    border: none;
     color: var(--basic-white);
-    background-color: var(--basic-brown); 
+    background-color: var(--basic-brown);
+    /* outline: 5px solid #00ff144d; */ 
+}
+
+.hotel-search-button:focus, 
+.hotel-search-button:hover {
+    background-color: var(--basic-medium-brown);
+}
+
+.hotel-search-button:active {
+    color: var(--basic-brown);
+    background-color: var(--basic-dark-brown);
 }
 
 .search-form  {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 55px;
     font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
     color: var(--basic-black);
     background-color: var(--basic-white);
     background-position: center, 0px 0px;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); 
+    /* outline: 3px solid #00e1ff75; */
 }
 
-.search-item input  {
+.search-form-items {
+    display: flex;
+    width: 458px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 55px;
+    /* outline: 3px solid #21f51a75; */
+}
+
+.search-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: var(--basic-black);
+    margin: 0;
+    padding: 0; 
+    margin-bottom: 29px;
+    /* outline: 3px solid #ff00dd75; */
+}
+
+
+input::-webkit-input-placeholder {
+    color: var(--basic-black);
+   } 
+   input::-moz-placeholder {
+    color: var(--basic-black);
+   }
+
+.search-item input:hover {
+    background-color: #ebebeb;
+}
+
+.search-item input:focus {
+    outline-color: var(--basic-gray-05);
+    background-color: var(--basic-white );
+}
+
+
+.search-item-date {
+    width: 458px;
+}
+
+.search-item-date input {
+    width: 346px;
     font: inherit;
+    padding-top: 6px;
+    padding-left: 13px;
+    padding-bottom: 6px;
     background-color: var(--basic-gray-06);
+    box-sizing: border-box;
     border: none;
 }
 
-.search-item input:focus  {
-    border-color: var(--basic-gray-02);
+.search-item-age {
+    position: relative;
+    margin-bottom: 0;
 }
 
-.search-calendar-icon  {
+.search-item-age input {
+    width: 114px;
+    font: inherit;
+    text-align: center;
+    padding-top: 6px;
+    padding-left: 13px;
+    padding-bottom: 6px;
+    background-color: var(--basic-gray-06);
+    box-sizing: border-box;
+    border: none;
+}
+
+.search-item button{
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+}
+
+.children {
+    margin-left: auto;
+    width: 179px;
+}
+
+.adult {
+    width: 226px;
+}
+
+.button-plus {
+    position: absolute;
+    right: 5px;
+    box-sizing: border-box;
+}
+
+.search-item label {
+    margin: 0;
+    padding: 0;
+}
+
+.search-icon-calend {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 23px;
+    height: 23px;
+    right: 6px;
+    background: url("img/calendar-icon-normal.svg") no-repeat;
+}
+
+.search-icon-calend:focus,
+.search-icon-calend:hover {
+    background: url("img/calendar-icon-hover.svg") no-repeat;
+}
+
+.search-icon-calend:active {
+    background: url("img/calendar-icon-active.svg") no-repeat;
+}
+
+.search-icon  {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    background: url("img/search-icon-normal.svg") no-repeat;
+}
+
+.search-icon-minus {
+    right: 88px;
+}
+
+.search-icon-plus {
+    right: 15px;
+    background-position: -21px 0;
+}
+
+.search-icon:focus,
+.search-icon:hover {
+    background: url("img/search-icon-hover.svg") no-repeat;
+}
+
+.search-icon:active {
+    background: url("img/search-icon-active.svg") no-repeat;
+}
+
+
+.search-icon-plus:focus,
+.search-icon-plus:hover {
+    background: url("img/search-icon-hover.svg") no-repeat;
+    background-position: -21px 0;
+}
+
+.search-icon-plus:active {
+    background: url("img/search-icon-active.svg") no-repeat;
+    background-position: -21px 0;
+}
+
+
+/* .search-item-date input::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 23px;
     background-image: url("img/calendar.svg");
     background-position: right;
     background-repeat: no-repeat;
-}
+} */
 
 /* Button */
 
@@ -780,6 +975,9 @@ img  {
 }
 
 .search-button  {
+    margin: 0px;
+    padding: 16px 182px;
+    width: 458px;
     font: inherit;
     font-size: 21px;
     line-height: 26px;
@@ -792,19 +990,15 @@ img  {
 }
 
 .search-button:hover,
-.search-button:focus,
-.search-button:active  {
-    background-color: var(--basic-gray-02);
+.search-button:focus {
+    background-color: var(--basic-medium-blue);
 }
 
-.btn {
-    background-color: transparent;
-    border: none;
-    color: var(--basic-gray-03);
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
+.search-button:active  {
+    color: var(--basic-light-blue);
+    background-color: var(--basic-dark-blue);
 }
+
 
 .filters button {
     margin-left: 90px;
